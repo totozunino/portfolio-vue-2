@@ -15,3 +15,28 @@
   color: #2c3e50;
   -webkit-tap-highlight-color: transparent;
 }
+
+main {
+  min-height: 725px !important;
+}
+
+* {
+  scrollbar-color: #626262 transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  background: white;
+  height: 0.3em;
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  box-sizing: content-box;
+  border: 1px solid #929292;
+  background: #626262;
+}
