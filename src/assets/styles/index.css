@@ -40,3 +40,76 @@ main {
   border: 1px solid #929292;
   background: #626262;
 }
+
+.notifications {
+  top: 0px !important;
+  width: 310px !important;
+  right: 10px !important;
+}
+
+.notification-wrapper {
+  margin: 10px 0 !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+}
+
+.vue-notification {
+  font-size: 14px !important;
+  margin: -0px 0px 0px 0px !important;
+  margin-right: 0px !important;
+  cursor: pointer !important;
+  height: 100% !important;
+}
+
+.vue-notification-group {
+  top: 25px !important;
+  right: 25px !important;
+}
+
+.vue-notification-wrapper {
+  border-radius: 2px !important;
+  margin-bottom: 5px !important;
+}
+
+.vue-notification-template.vue-notification.warning {
+  background-color: #ffbc00 !important;
+  border-left: 6px solid #ffd150 !important;
+}
+
+.vue-notification-template.vue-notification.error {
+  border-left-color: #b82e24 !important;
+  border-left: 6px solid #ff8484 !important;
+}
+
+.vue-notification-template.vue-notification.info {
+  background: #1fa9d8 !important;
+  border-left: 6px solid #87d1ea !important;
+}
+
+.vue-notification-template.vue-notification.success {
+  border-left: 6px solid #648b5b !important;
+  background-color: #73b176 !important;
+}
+
+.vue-notification .notification-title {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.scale-enter,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s ease;
+}
+
+.scale-enter-to,
+.scale-leave {
+  opacity: 1;
+  transform: scale(1);
+}

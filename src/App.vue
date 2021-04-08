@@ -1,8 +1,11 @@
 <template>
-  <v-app>
+  <v-app id="app">
+    <notifications group="feedback" />
     <navbar />
     <v-main>
-      <router-view />
+      <transition name="scale" mode="out-in">
+        <router-view />
+      </transition>
     </v-main>
     <Footer />
   </v-app>
