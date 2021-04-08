@@ -2,9 +2,9 @@
   <div class="footer pa-6">
     <div class="text-center my-2">
       <p class="text-h5 mb-2 text-center">Navigate</p>
-      <router-link to="/" class="footer__item">Home</router-link>
-      <router-link to="/about" class="footer__item">About</router-link>
-      <router-link to="/contact" class="footer__item">Contact</router-link>
+      <router-link to="/" class="footer__item" @click.native="scrollToTop">Home</router-link>
+      <router-link to="/about" class="footer__item" @click.native="scrollToTop">About</router-link>
+      <router-link to="/contact" class="footer__item" @click.native="scrollToTop">Contact</router-link>
       <p class="text-h5 mb-0 mt-4 text-center">Social</p>
       <v-btn class="mx-2" x-large icon dark @click="newTab('https://www.linkedin.com/in/mathias-zunino-5531021a3/')">
         <v-icon>mdi-linkedin</v-icon>
@@ -32,6 +32,14 @@ import { Vue, Component } from "vue-property-decorator";
 export default class Footer extends Vue {
   private newTab(link: string) {
     window.open(link, "_blank");
+  }
+
+  private scrollToTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
   }
 }
 </script>
