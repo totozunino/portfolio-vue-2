@@ -17,7 +17,7 @@
       </v-btn>
     </div>
     <hr />
-    <p class="pt-4 mb-1">Designed by @totoz - 2020</p>
+    <p class="pt-4 mb-1">Designed by @totoz - {{ new Date().getFullYear() }}</p>
     <p style="opacity: 0.6" class="mb-0">Made with</p>
     <v-avatar size="40" tile class="pt-0">
       <v-img src="@/assets/images/vue-logo.png" alt="Vue Logo"></v-img>
