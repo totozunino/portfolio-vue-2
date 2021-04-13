@@ -30,9 +30,10 @@ export default class About extends Vue {
   private projects = [
     {
       name: "Portfolio",
-      description: "A single page web app for helping me organize my tasks, built with Nuxt.js, Firestore, and Vuetify",
+      description: "Personal web app built with Vue.js and Vuetify",
       logo: require("../assets/images/logo.png"),
       source: "https://gitlab.com/totoz/day-tasks",
+      url: "",
       technologies: [
         {
           name: "Vue.js",
@@ -51,9 +52,10 @@ export default class About extends Vue {
     },
     {
       name: "Avatar Maker",
-      description: "A single page web app for the fing, built in Nuxt.js, Firebase, and Vuetify",
+      description: "An app to customize a fun avatar, built in Vue.js and Vuetify",
       logo: require("../assets/images/avatar.png"),
-      source: "",
+      source: "https://github.com/totozunino/avatar-maker",
+      url: "https://avatar-maker-2ba67.web.app/",
       technologies: [
         {
           name: "Vue.js",
@@ -68,25 +70,27 @@ export default class About extends Vue {
           src: "typescript.png"
         }
       ],
-      status: "Dev"
+      status: "Online"
     },
     {
       name: "Tasku",
-      description: "A single page web app for helping me organize my projects, built in React",
+      description:
+        "A single page web app for helping me organize my tasks, built with Vue.js, Firebase and Tailwind CSS",
       logo: require("../assets/images/tasku-logo.jpg"),
-      source: "https://gitlab.com/totoz/engage-projects",
+      source: "",
+      url: "",
       technologies: [
         {
           name: "Vue.js",
           src: "vue-logo.png"
         },
         {
-          name: "Vuetify",
-          src: "vuetify.svg"
+          name: "Firebase",
+          src: "fb.png"
         },
         {
-          name: "Typescript",
-          src: "typescript.png"
+          name: "tailwindcss",
+          src: "tailwindcss.svg"
         }
       ],
       status: "Dev"

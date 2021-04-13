@@ -1,11 +1,11 @@
 <template>
-  <v-card class="project" width="325" min-height="290">
+  <v-card class="project" width="325" min-height="290" @click="openProject(project.url)">
     <v-chip class="ma-2 project__chip" :color="project.status == 'Online' ? 'primary' : '#ff9b54'" x-small dark>
       {{ project.status }}
     </v-chip>
     <v-card-title>
       <v-img :src="project.logo" alt="Logo" max-width="74" class="mt-2"></v-img>
-      <v-btn icon x-large class="ml-auto mb-auto" @click="openProject(project.source)">
+      <v-btn icon x-large class="ml-auto mb-auto" :disabled="project.source == ''" @click="openProject(project.source)">
         <v-icon color="#2C3E50">mdi-github</v-icon>
       </v-btn>
     </v-card-title>
@@ -25,19 +25,23 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-@Component({
-  props: {
-    project: {
-      type: Object,
-      required: true
-    }
-  }
-})
+interface IProject {
+  name: string;
+  description: string;
+  logo: string;
+  source: string;
+  url: string;
+  technologies: [{ name: string; src: string }];
+  status: string;
+}
+
+@Component({})
 export default class Project extends Vue {
+  @Prop() private project!: IProject;
   private openProject(link: string) {
-    window.open(link, "_blank");
+    if (link) window.open(link, "_blank");
   }
 }
 </script>
