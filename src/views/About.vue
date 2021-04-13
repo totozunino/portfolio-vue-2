@@ -32,7 +32,7 @@ export default class About extends Vue {
       name: "Portfolio",
       description: "Personal web app built with Vue.js and Vuetify",
       logo: require("../assets/images/logo.png"),
-      source: "https://gitlab.com/totoz/day-tasks",
+      source: "https://github.com/totozunino/portfolio",
       url: "",
       technologies: [
         {
